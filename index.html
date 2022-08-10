@@ -24,11 +24,10 @@
                             {data: "id"},
                             {data: "description"},
                             {data: "employee"},
-                            {data: "deadline"},
-                            {data: "status"},
+                            {data: "deadline"}
                         ],
                     columnDefs :[
-                        {"targets":5, "data":"status", "render": function(data,type,full,meta)
+                        {"targets":4, "data":"status", "render": function(data,type,full,meta)
                             { 
                                 if (full.status == 0) {
                                     return "<button type='button' class='btn btn-warning btn-sm' data-toggle='modal' data-target='#update-task' id='edit-task' data-id='"+full.id+"'>"+
@@ -38,7 +37,7 @@
                                             "<i class='fa fa-trash'></i>"+
                                             "</button> "+
                                             "<button type='button' class='btn btn-success btn-sm' id='mark-done' data-id='"+full.id+"'>"+
-                                            "<i class='fa fa-check'></i>"+
+                                            "<i class='fa fa-check'></i> Mark as done"+
                                             "</button>"
                                 }else {
                                     return "<button type='button' class='btn btn-warning btn-sm' data-toggle='modal' data-target='#update-task' id='edit-task' data-id='"+full.id+"'>"+
@@ -46,7 +45,11 @@
                                             "</button> "+
                                             "<button type='button' class='btn btn-danger btn-sm' id='delete-task' data-id='"+full.id+"'>"+
                                             "<i class='fa fa-trash'></i>"+
-                                            "</button> "
+                                            "</button> "+
+                                            "<button type='button' class='btn btn-primary btn-sm' id='done' data-id='"+full.id+"'>"+
+                                            "Done"+
+                                            "</button>"
+
                                 }
                             }
                         },
@@ -196,7 +199,6 @@
                                         <th>Description</th>
                                         <th>Deadline</th>
                                         <th>Employee</th>
-                                        <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
