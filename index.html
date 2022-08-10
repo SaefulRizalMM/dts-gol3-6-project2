@@ -67,7 +67,7 @@
 
                     $(".btn-create").click(function(e){
                         e.preventDefault();
-                        alert("test");
+                        // alert("test");
                         // var form_action = $("#create-task").find("form").attr("action");                
                         var description = $("#create-task").find("input[name='description']").val();
                         var employee = $("#create-task").find("input[name='employee']").val();
@@ -198,7 +198,7 @@
                                         <th>id</th>
                                         <th>Description</th>
                                         <th>Deadline</th>
-                                        <th>Employee</th>
+                                        <th>Assign to</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -224,7 +224,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="employee">Employee:</label>
+                                <label class="control-label" for="employee">Assign to:</label>
                                 <input type="text" name="employee" class="form-control" data-error="Please enter employee." required />
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -257,7 +257,7 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label" for="employee-update">Employee:</label>
+                                <label class="control-label" for="employee-update">Assign to:</label>
                                 <input type="text" name="employee-update" class="form-control" data-error="Please enter employee." required />
                                 <div class="help-block with-errors"></div>
                             </div>
